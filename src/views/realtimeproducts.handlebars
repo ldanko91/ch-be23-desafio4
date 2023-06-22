@@ -1,0 +1,37 @@
+<h1>Formulario para añadir productos</h1>
+
+<section id="agregarProds">
+    <form id="formAgregarProd">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="titleProd" name="nombre" required><br><br>
+
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descProd" name="descripcion" required><br><br>
+
+    <label for="precio">Precio:</label>
+    <input type="number" id="priceProd" name="precio" required><br><br>
+
+    <label for="thumbnail">Thumbnail:</label>
+    <input type="text" id="thumbProd" name="thumbnail" required><br><br>
+
+    <label for="codigo">Código:</label>
+    <input type="text" id="codeProd" name="codigo" required><br><br>
+
+    <label for="stock">Stock:</label>
+    <input type="number" id="stockProd" name="stock" required><br><br>
+
+    <label for="categoria">Categoría:</label>
+    <input type="text" id="categProd" name="categoria" required><br><br>
+
+    <input type="submit" value="Enviar">
+  </form>
+</section>
+
+<h1>Botón para mostrar productos almacenados</h1>
+<section id="seccionProds">
+<button id="showProds">Mostrar productos!</button>
+<ul id="showProdsDIV">
+</ul>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/rtpsocket.js"></script>
+</section>
