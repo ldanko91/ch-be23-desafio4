@@ -52,4 +52,12 @@ socketServer.on('connection', socket=>{
         const productos = manager1.getProducts();
         socket.emit('message-showprods', productos)
     })
+
+    socket.on('elimProd', IDaElim =>{
+        console.log("Solicitud de eliminar producto con ID:");
+        console.table(IDaElim);
+        manager1.deleteProductById(IDaElim);
+        const productos = manager1.getProducts();
+        socket.emit('message-showprods', productos)
+    })
 })

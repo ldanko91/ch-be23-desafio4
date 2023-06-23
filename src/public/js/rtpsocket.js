@@ -44,3 +44,12 @@ formAgregarProd.addEventListener('submit', e =>{
     }
     socket.emit('agregarProd', productoNuevo)
 })
+
+const formElimProd = document.getElementById("formElimProd")
+const IDElimProd = document.getElementById("IDElimProd")
+
+formElimProd.addEventListener('submit', e =>{
+    e.preventDefault();
+    let IDaEliminar = parseInt(IDElimProd.value)
+    socket.emit('elimProd', IDaEliminar)
+})
